@@ -19,19 +19,30 @@ public class Kata {
     System.exit(0);
   }
 
-   private static String compute(String s) {
+  private static String compute(String s) {
     StringBuilder sb = new StringBuilder();
-  
+    int num = Integer.parseInt(s);
+    if (num % 3 == 0) {
+      sb.append("Foo");
+    } 
+    if (num % 5 == 0) {
+      sb.append("Bar");
+    } 
+    if (num % 7 == 0) {
+      sb.append("Qix");
+    } 
+    if (num % 3 != 0 && num % 5 != 0 && num % 7 != 0) {
+      sb.append(num);
+    }
     for (int i = 0; i < s.length(); ++i) {
       char c = s.charAt(i);
-      int num = Integer.parseInt(c);
-      if (num % 3 == 0) {
+      if (c == '3') {
         sb.append("Foo");
       }
-      if (num % 5 == 0) {
+      if (c == '5') {
         sb.append("Bar");
       }
-      if (num % 7 == 0) {
+      if (c == '7') {
         sb.append("Qix");
       }
     }
