@@ -34,7 +34,7 @@ public class Kata {
     } 
     if (num % 3 != 0 && num % 5 != 0 && num % 7 != 0) {
       sb.append(num);
-      s.replaceAll('0','*');
+      String s = s.replaceAll("0","*");
     }
 
     for (int i = 0; i < s.length(); ++i) {
