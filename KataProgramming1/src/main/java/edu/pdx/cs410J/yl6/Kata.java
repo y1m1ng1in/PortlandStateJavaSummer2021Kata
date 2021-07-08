@@ -15,7 +15,7 @@ public class Kata {
       System.exit(1);
     }
     String result = compute(args[0]);
-    System.out.println(result);
+    System.out.print(result);
     System.exit(0);
   }
 
@@ -32,10 +32,11 @@ public class Kata {
     if (num % 7 == 0) {
       sb.append("Qix");
     } 
+    String tmp = "";
     if (num % 3 != 0 && num % 5 != 0 && num % 7 != 0) {
       // sb.append(num);
       s = s.replaceAll("0","*");
-      sb.append(s);
+      tmp = s;
     }
 
     for (int i = 0; i < s.length(); ++i) {
@@ -53,6 +54,9 @@ public class Kata {
       if(c == '0'){
         sb.append('*');
       }
+    }
+    if (sb.length() == 0) {
+      return tmp;
     }
     return sb.toString();
   }
