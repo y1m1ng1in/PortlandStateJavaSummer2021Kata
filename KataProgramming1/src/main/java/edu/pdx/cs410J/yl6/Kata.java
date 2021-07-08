@@ -21,25 +21,17 @@ public class Kata {
 
    private static String compute(String s) {
     StringBuilder sb = new StringBuilder();
-    int num = Integer.parseInt(s);
-    if (num % 3 == 0) {
-      sb.append("Foo");
-    } 
-    if (num % 5 == 0) {
-      sb.append("Bar");
-    }
-    if (num % 7 == 0) {
-      sb.append("Qix");
-    }
+  
     for (int i = 0; i < s.length(); ++i) {
       char c = s.charAt(i);
-      if (digit == 3) {
+      int num = Integer.parseInt(c);
+      if (num % 3 == 0) {
         sb.append("Foo");
       }
-      if (digit == 5) {
+      if (num % 5 == 0) {
         sb.append("Bar");
       }
-      if (digit == 7) {
+      if (num % 7 == 0) {
         sb.append("Qix");
       }
     }
