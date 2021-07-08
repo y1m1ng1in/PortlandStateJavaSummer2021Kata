@@ -33,8 +33,9 @@ public class Kata {
       sb.append("Qix");
     } 
     if (num % 3 != 0 && num % 5 != 0 && num % 7 != 0) {
-      sb.append(num);
+      // sb.append(num);
       s = s.replaceAll("0","*");
+      sb.append(s);
     }
 
     for (int i = 0; i < s.length(); ++i) {
@@ -55,6 +56,7 @@ public class Kata {
     }
     return sb.toString();
   }
+
 
 }
 
