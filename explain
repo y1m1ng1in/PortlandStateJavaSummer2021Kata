@@ -1,0 +1,26 @@
+cannot be divided by 3, or 5, or 7:
+  101 => 1*1 (replace 0 to *)
+
+can be divided by at least 1 of the 3 numbers:
+  303 => FooFoo*Foo 
+    (can be divided by 3, append Foo
+     1st digit is 3, append Foo
+     2nd digit is 0, append *
+     3rd digit is 3, append Foo)
+  
+  10101 => FooQix**
+    (can be divided by 3 and 7, append FooQix
+     1st digit is 1, not in {3, 5, 7}, append nothing
+     2nd digit is 0, append *
+     3rd digit is 1, not in {3, 5, 7}, append nothing
+     4th digit is 0, append *
+     5th digit is 1, not in {3, 5, 7}, append nothing)
+
+Rewrite rule:
+- If the number is divisible by 3, write "Foo" instead of the number
+- If the number is divisible by 5, add "Bar"
+- If the number is divisible by 7, add "Qix"
+- If the number cannot be divided by above 3 numbers 
+    output the number with replacing 0 to *
+- Otherwise
+    For each digit 3, 5, 7, 0, add "Foo", "Bar", "Qix", "*" in the digits order.
