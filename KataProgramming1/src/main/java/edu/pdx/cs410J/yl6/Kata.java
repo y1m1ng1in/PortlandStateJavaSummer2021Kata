@@ -22,6 +22,7 @@ public class Kata {
   private static String compute(String s) {
     StringBuilder sb = new StringBuilder();
     int num = Integer.parseInt(s);
+    int count = 0;
     if (num % 3 == 0) {
       sb.append("Foo");
     } 
@@ -33,9 +34,12 @@ public class Kata {
     } 
     if (num % 3 != 0 && num % 5 != 0 && num % 7 != 0) {
       sb.append(num);
+      s.replaceAll('0','*');
     }
+
     for (int i = 0; i < s.length(); ++i) {
       char c = s.charAt(i);
+
       if (c == '3') {
         sb.append("Foo");
       }
