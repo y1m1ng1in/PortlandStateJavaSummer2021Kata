@@ -92,4 +92,57 @@ class KataIT extends InvokeMainTestCase {
     InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "53");
     assertThat(result.getTextWrittenToStandardOut(), equalTo("BarFoo"));
   }
+
+  @Test
+  void testcase13() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "51");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("FooBar"));
+  }
+
+  @Test
+  void testcase14() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "21");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("FooQix"));
+  }
+
+  @Test
+  void testcase15() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "13");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("Foo"));
+  }
+
+  /**
+   * 10 can be divided by 5, append Foo.
+   * 1st digit is 1, append nothing.
+   * 2nd digit is 0, append *.
+   */
+  @Test
+  void testcase16() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "10");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("Bar*"));
+  }
+
+  @Test
+  void testcase17() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "9");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("Foo"));
+  }
+
+  @Test
+  void testcase18() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "8");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("8"));
+  }
+
+  @Test
+  void testcase19() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "6");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("Foo"));
+  }
+
+  @Test
+  void testcase20() {
+    InvokeMainTestCase.MainMethodResult result = invokeMain(Kata.class, "4");
+    assertThat(result.getTextWrittenToStandardOut(), equalTo("4"));
+  }
 }
