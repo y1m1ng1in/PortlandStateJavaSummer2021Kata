@@ -10,7 +10,40 @@ public class Kata {
                                                                                     
 
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-    System.exit(1);
+    if (args.length < 1) {
+      System.err.println("Missing command line arguments");
+      System.exit(1);
+    }
+    String result = compute(args[0]);
+    System.out.println(result);
+    System.exit(0);
+  }
+
+   private static String compute(String s) {
+    StringBuilder sb = new StringBuilder();
+    int num = Integer.parseInt(s);
+    if (num % 3 == 0) {
+      sb.append("Foo");
+    } 
+    if (num % 5 == 0) {
+      sb.append("Bar");
+    }
+    if (num % 7 == 0) {
+      sb.append("Qix");
+    }
+    for (int i = 0; i < s.length(); ++i) {
+      char c = s.charAt(i);
+      if (digit == 3) {
+        sb.append("Foo");
+      }
+      if (digit == 5) {
+        sb.append("Bar");
+      }
+      if (digit == 7) {
+        sb.append("Qix");
+      }
+    }
+    return sb.toString();
   }
 }
+
